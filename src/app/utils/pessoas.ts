@@ -1,0 +1,57 @@
+
+const Pessoas = [
+    {
+        "codigo": 1,
+        "nome": "Paulo",
+        "rendimento": 3000,
+        "risco": "B",
+        "endereco": "Rua 1",
+        "empregado": true,
+        "patrimonio": 80000,
+        "dividas": 52300,
+        "parcelas": 12,
+        "emprestimo_disponivel": 500,
+        "emprestimo_solicitado": 1000,
+    },
+    {
+        "codigo": 2,
+        "nome": "John",
+        "rendimento": 4500,
+        "risco": "B",
+        "endereco": "Rua 2",
+        "empregado": false,
+        "patrimonio": 80000,
+        "dividas": 52300,
+        "parcelas": 2,
+        "emprestimo_disponivel": 250,
+        "emprestimo_solicitado": 100,
+    },
+    {
+        "codigo": 3,
+        "nome": "Erivan",
+        "rendimento": 4500,
+        "risco": "B",
+        "endereco": "Rua 3",
+        "empregado": true,
+        "patrimonio": 80000,
+        "dividas": 52300,
+        "parcelas": 12,
+        "emprestimo_disponivel": 432,
+        "emprestimo_solicitado": 509,
+    },
+    {
+        "codigo": 4,
+        "nome": "Bruno",
+        "rendimento": 9000,
+        "risco": "A",
+        "endereco": "Rua 4",
+        "empregado": false,
+        "patrimonio": 80000,
+        "dividas": 52300,
+        "parcelas": 12,
+        "emprestimo_disponivel": 123,
+        "emprestimo_solicitado": 453,
+    }
+];
+
+export default Pessoas;

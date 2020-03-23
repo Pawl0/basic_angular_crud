@@ -1,0 +1,32 @@
+<h3>{{titulo}}</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Rendimento mensal (R$)</th>
+            <th>Risco</th>
+            <th>Endereço</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let pessoa of pessoas; let i = index;">
+            <td>{{ pessoa._id }}</td>
+            <td>{{ pessoa.nome }}</td>
+            <td>{{ pessoa.rendimento }}</td>
+            <td>{{ pessoa.risco }}</td>
+            <td>{{ pessoa.endereco }}</td>
+            <!-- <td *ngIf='pessoa.ativo'>Sim</td>
+        <td *ngIf='!pessoa.ativo'>Não</td> -->
+            <td><a (click)="editar(pessoa._id);">Editar</a></td>
+            <td><a (click)="excluir(pessoa._id, i);">Excluir</a></td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align: right;">Total de Registros: {{ pessoas.length }}</td>
+        </tr>
+    </tbody>
+</table>

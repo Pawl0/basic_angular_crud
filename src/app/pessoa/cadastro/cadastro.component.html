@@ -1,0 +1,57 @@
+<form (ngSubmit)="salvar()">
+
+    <br />
+    <h3>{{titulo}}</h3>
+
+    <label>Código:
+        <input type="input" name="codigo" size="10" [(ngModel)]="pessoa.codigo" disabled />
+    </label><br /><br />
+
+    <label>Nome:
+        <input type="input" name="nome" size="50" [(ngModel)]="pessoa.nome" />
+    </label><br /><br />
+
+    <label>Endereço:
+        <input type="input" name="endereco" size="45" [(ngModel)]="pessoa.endereco" />
+    </label><br /><br />
+
+    <label>Rendimento mensal:
+        <input type="input" name="rendimento" size="10" [(ngModel)]="pessoa.rendimento" (ngModelChange)="getRisco()" />
+    </label>
+
+    <label>Risco:
+        <label type="radio" name="risco">{{pessoa.risco}}
+        </label>
+    </label>
+    <label>
+        <input type="checkbox" name="empregado" [(ngModel)]="pessoa.empregado" /> Empregado<br /><br />
+    </label>
+
+    <label>Valor Patrimônio:
+        <input type="input" name="patrimonio" size="10" [(ngModel)]="pessoa.patrimonio" />
+    </label><br /><br />
+
+    <label>Valor Dívidas:
+        <input type="input" name="dividas" size="10" [(ngModel)]="pessoa.dividas" />
+    </label><br /><br />
+
+    <hr /><br /><br />
+
+    <label>Valor Empréstimo Solicitado:
+        <input type="input" name="emprestimo_solicitado" size="10" [(ngModel)]="pessoa.emprestimo_solicitado" />
+    </label>
+    <label> Quant. de Parcelas Solicitadas
+        <select name="quantidade_parcelas" [(ngModel)]="pessoa.parcelas">
+            <option *ngFor="let parcela of parcelas" [value]="parcela">{{parcela}}</option>
+        </select>
+    </label>
+    <button type="button" (click)="calcularEmprestimo()">Calcular</button>
+    <br /><br />
+
+    <label>Valor Empréstimo Final Disponível:
+        <input type="input" disabled name="emprestimo_disponivel" size="10"
+            [(ngModel)]="pessoa.emprestimo_disponivel" />
+    </label><br /><br />
+
+    <button class="btn_form" type="submit">Salvar</button>
+</form>
